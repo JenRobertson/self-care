@@ -62,3 +62,8 @@ img {
 .stain  {
     z-index: 1;
 }
+
+.glass {
+    top: 55px;
+    left: 45px;
+}
