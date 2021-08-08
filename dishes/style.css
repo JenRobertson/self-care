@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+
+@font-face {
+    font-family: Pixeled;
+    src: url(fonts/Pixeled.ttf);
+}
+
+@font-face {
+    font-family: orange-kid;
+    src: url(fonts/orange-kid.ttf);
+}
+
+@font-face {
+    font-family: smallest-pixel-7;
+    src: url(fonts/smallest-pixel-7-spacing.otf);
+}
+
+img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    zoom: 4;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+#container {
+    zoom: 1;
+    position: relative;
+    width: 1024;
+    height: 576px;
+    background-color: grey;
+    margin: 0;
+    background-image: url('./images/sink.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.paw {
+    top: 80px;
+    left: 60px;
+    z-index: 2;
+}
+
+.dish {
+    top: 80px;
+    left: 75px;
+}
+
+.stain  {
+    z-index: 1;
+}
