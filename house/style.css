@@ -44,7 +44,7 @@ body {
     position: absolute;
     top: 100px;
     left: 200px;
-    transition: left 1s linear, top 1s linear;
+    transition: left 1s linear, top 1s linear, background 5s linear;
     background-image: url('./images/cat2.png');
     background-repeat: no-repeat;
     background-size: cover;

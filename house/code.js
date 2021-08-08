@@ -52,7 +52,7 @@ const increaseLevel = () => {
       shadow.style.backgroundImage = "url('./house/images/Shadow3.png')";
       break;
     default:
-      shadow.style.backgroundImage = "none";
+      shadow.style.backgroundImage = "url('./house/images/Shadow4.png')";
       break;
   }
 }
