@@ -6,7 +6,10 @@ const data = {
     player: {
         x: 0,
         y: 0
-    }
+    },
+    audio: {
+      queue: 0,
+    },
 };
 
 container.onclick = function(e){
@@ -41,6 +44,8 @@ const walkTo = (xClick, yClick) => {
 
 const increaseLevel = () => {
   data.tasksCompleted++;
+  data.audio.queue++;
+
   switch (data.tasksCompleted) {
     case 1:
       shadow.style.backgroundImage = "url('./house/images/Shadow1.png')";
@@ -60,3 +65,36 @@ const increaseLevel = () => {
 const hideAllButtons = () => {
     teethButton.style.display = 'none';
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  const audioFiles = ['01.mp3', '02.mp3', '03.mp3', '04.mp3', '05.mp3', '06.mp3', ];
+
+  const audios = [];
+  let currentAudio = 0;
+  let audioStarted = false;
+
+  audioFiles.forEach(file => {
+    const audio = new Audio(`house/audio/${file}`);
+
+    audio.volume = 0.7;
+
+    audio.addEventListener('ended', () => {
+      if (data.audio.queue > 0) {
+        if (currentAudio < audios.length - 1) currentAudio++;
+        data.audio.queue--;
+      }
+
+      audios[currentAudio].currentTime = 0;
+      audios[currentAudio].play();
+    });
+
+    audios.push(audio);
+  });
+
+  document.addEventListener('click', () => {
+    if (!audioStarted) {
+      audios[currentAudio].play();
+      audioStarted = true;
+    }
+  });
+});
