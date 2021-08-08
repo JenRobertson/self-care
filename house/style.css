@@ -57,13 +57,14 @@ body {
     position: absolute;
     top: 100px;
     left: 200px;
-    transition: left 1s linear, top 1s linear, background 5s linear;
+    transition: left 1s linear, top 1s linear;
     background-image: url('./images/cat2.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #shadow {
+    transition: left 1s linear, top 1s linear, background 5s linear;
     margin-top: -779px;
     margin-left: -1289px;
     width: 2940px;
