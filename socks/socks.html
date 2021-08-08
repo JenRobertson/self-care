@@ -3,23 +3,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>Self Care Game Jam - Socks</title>
-
-        
         <link rel="stylesheet" href="style.css?v=1.0">
-        
     </head>
     
     <body>
         <div id='container'>
-            <image id='basket-front' src='./images/basket-front.png' />
-            <image id='basket-back' src='./images/basket-back.png'/>
+            <div id='progress'>
+                <div id='progressInner'></div>
+            </div>
 
-            <image class='sock' src='./images/sock6.png' id='sock1'/>
-            <image class='sock' src='./images/sock1.png' id='sock2'/>
-            <image class='sock' src='./images/sock2.png' id='sock3'/>
-            <image class='sock' src='./images/sock3.png' id='sock4'/>
-            <image class='sock' src='./images/sock4.png' id='sock5'/>
-            <image class='sock' src='./images/sock5.png' id='sock6'/>
+            <image id='basket-back' src='./images/basket-back.png'/>
+            <div id="basketArea">
+                <image id='basket-front' src='./images/basket-front.png' />
+            </div>
+
+            <image draggable='true' class='sock' src='./images/sock6.png' id='sock1'/>
+            <image draggable='true' class='sock' src='./images/sock1.png' id='sock2'/>
+            <image draggable='true' class='sock' src='./images/sock2.png' id='sock3'/>
+            <image draggable='true' class='sock' src='./images/sock3.png' id='sock4'/>
+            <image draggable='true' class='sock' src='./images/sock4.png' id='sock5'/>
+            <image draggable='true' class='sock' src='./images/sock5.png' id='sock6'/>
         </div>
         
         <script src="code.js"></script>
