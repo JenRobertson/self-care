@@ -44,6 +44,17 @@ socksButton.onclick = (e) => {
   showGame('socks/socks.html');
 }
 
+kitchen.onclick = function(e){
+  e.stopPropagation();
+  walkTo(e.clientX, e.clientY);
+  kitchenButton.style.display = 'block';
+};
+
+kitchenButton.onclick = (e) => {
+  e.stopPropagation();
+  showGame('dishes/dishes.html');
+}
+
 const walkTo = (xClick, yClick) => {
 
   y = yClick - 150; // feet offset
@@ -81,6 +92,7 @@ const increaseLevel = () => {
 const hideAllButtons = () => {
     teethButton.style.display = 'none';
     socksButton.style.display = 'none';
+    kitchenButton.style.display = 'none';
 }
 
 window.addEventListener('DOMContentLoaded', () => {

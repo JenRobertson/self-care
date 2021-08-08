@@ -108,6 +108,11 @@ body {
     left: 730px;
 }
 
+#kitchenButton {
+    top: 3px;
+    left: 598px;
+}
+
 .interactButton {
     z-index: 1;
     font-size: 30px;
