@@ -26,6 +26,7 @@ body {
 
 
 #container {
+    position: relative;
     width: 1024;
     height: 576px;
     background-color: grey;
@@ -33,10 +34,11 @@ body {
     background-image: url('./images/room1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 
-#player {
+#player, #shadow {
     width: 120px;
     height: 160px;
     position: absolute;
@@ -46,6 +48,15 @@ body {
     background-image: url('./images/cat2.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#shadow {
+    margin-top: -779px;
+    margin-left: -1289px;
+    width: 2940px;
+    height: 1648px;
+    background-image: url('./images/Shadow1.png');
+    pointer-events: none;
 }
 
 #sink {
@@ -58,6 +69,7 @@ body {
 }
 
 .interactButton {
+    z-index: 1;
     font-size: 30px;
     width: 204px;
     height: 120px;
