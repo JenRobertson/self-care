@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+
+@font-face {
+    font-family: Pixeled;
+    src: url(fonts/Pixeled.ttf);
+}
+
+@font-face {
+    font-family: orange-kid;
+    src: url(fonts/orange-kid.ttf);
+}
+
+@font-face {
+    font-family: smallest-pixel-7;
+    src: url(fonts/smallest-pixel-7-spacing.otf);
+}
+
+img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    zoom: 4;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+.sock {
+    cursor: move;
+}
+
+#sock1 {
+    left: 173px;
+    top: 57px;
+}
+
+#sock2 {
+    left: 167px;
+    top: 97px;
+}
+
+#sock3 {
+    left: 154px;
+    top: 57px;
+}
+
+#sock4 {
+    left: 178px;
+    top: 24px;
+}
+
+#sock5 {
+    left: 203px;
+    top: 92px;
+}
+
+#sock6 {
+    left: 203px;
+    top: 39px;
+}
+
+#basket-back {
+    left: 20px;
+    top: 38px;
+}
+
+#basket-front {
+    left: 20px;
+    top: 56px;
+    z-index: 1;
+}
+
+#container {
+    zoom: 1;
+    position: relative;
+    width: 1024;
+    height: 576px;
+    background-color: grey;
+    margin: 0;
+    background-image: url('./images/floor.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
