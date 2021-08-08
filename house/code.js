@@ -30,6 +30,17 @@ sink.onclick = function(e){
 
 teethButton.onclick = (e) => {
   e.stopPropagation();
+  showGame('teeth/teeth.html');
+}
+
+socks.onclick = function(e){
+  e.stopPropagation();
+  walkTo(e.clientX, e.clientY);
+  socksButton.style.display = 'block';
+};
+
+socksButton.onclick = (e) => {
+  e.stopPropagation();
   showGame('socks/socks.html');
 }
 
@@ -69,6 +80,7 @@ const increaseLevel = () => {
 
 const hideAllButtons = () => {
     teethButton.style.display = 'none';
+    socksButton.style.display = 'none';
 }
 
 window.addEventListener('DOMContentLoaded', () => {

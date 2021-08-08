@@ -64,6 +64,7 @@ body {
 }
 
 #shadow {
+    opacity: 0;
     transition: left 1s linear, top 1s linear, background 5s linear;
     margin-top: -779px;
     margin-left: -1289px;
@@ -74,12 +75,38 @@ body {
 }
 
 #sink {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
+    top: 58px;
+    left: 3px;
+}
+
+#socks {
+    top: 114px;
+    left: 190px;
+}
+
+#bed {
+    top: 95px;
+    left: 106px;
+}
+
+#kitchen {
+    top: 9px;
+    left: 151px;
+}
+
+.furniture {
     position: absolute;
-    top: 200px;
+    zoom: 4;
+}
+
+#teethButton {
+    top: 90px;
     left: 0px;
+}
+
+#socksButton {
+    top: 327px;
+    left: 730px;
 }
 
 .interactButton {
@@ -88,8 +115,7 @@ body {
     width: 204px;
     height: 120px;
     position: absolute;
-    top: 90px;
-    left: 0px;
+
     display: none;
     background-color: Transparent;
     background-image: url('./images/bubble.png');
