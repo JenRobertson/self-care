@@ -24,8 +24,8 @@ const dishSpaceMove = () => {
   movesInDishSpace += 1;
   if (movesInDishSpace >= 150) {
     stains.style.display = "none";
+    window.parent.postMessage('done', '*');
   }
-  window.parent.postMessage('done', '*');
 }
 
 const glassSpaceMove = () => {
