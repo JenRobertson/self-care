@@ -1,0 +1,11 @@
+{
+  "name": "self-care-jam-audio-demo",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "http-server ./src"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^13.0.0"
+  }
+}
