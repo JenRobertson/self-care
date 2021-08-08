@@ -12,6 +12,11 @@ const data = {
     },
 };
 
+window.addEventListener('message', function(e) {
+  // close minigame when done message sent
+  if (e.data === 'done') closeGame();
+});
+
 container.onclick = function(e){
   walkTo(e.clientX, e.clientY);
   hideAllButtons();
@@ -20,12 +25,15 @@ container.onclick = function(e){
 sink.onclick = function(e){
   e.stopPropagation();
   walkTo(e.clientX, e.clientY);
-  teethButton.style.display = 'block'
+  teethButton.style.display = 'block';
 };
 
-const walkTo = (xClick, yClick) => {
+teethButton.onclick = (e) => {
+  e.stopPropagation();
+  showGame('socks/socks.html');
+}
 
-  increaseLevel(); // remove
+const walkTo = (xClick, yClick) => {
 
   y = yClick - 150; // feet offset
   x = xClick;
@@ -48,12 +56,9 @@ const increaseLevel = () => {
 
   switch (data.tasksCompleted) {
     case 1:
-      shadow.style.backgroundImage = "url('./house/images/Shadow1.png')";
-      break;
-    case 2:
       shadow.style.backgroundImage = "url('./house/images/Shadow2.png')";
       break;
-    case 3:
+    case 2:
       shadow.style.backgroundImage = "url('./house/images/Shadow3.png')";
       break;
     default:
@@ -98,3 +103,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const showGame = (url) => {
+  gameframe.src = url;
+  gameframe.style.display = 'block';
+}
+
+const closeGame = () => {
+  increaseLevel();
+  gameframe.src = '';
+  gameframe.style.display = 'none';
+}

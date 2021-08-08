@@ -30,6 +30,10 @@ basketArea.addEventListener("drop", function( event ) {
   
   if ( event.target.id == "basket-front" ) {
     socksInBasket++;
-    progressInner.style.width = (socksInBasket / socks.length) * 100 + '%';
+    const progress = (socksInBasket / socks.length) * 100;
+    progressInner.style.width = progress + '%';
+    if (progress >= 100) {
+      window.parent.postMessage('done', '*');
+    }
   }
 }, false);
