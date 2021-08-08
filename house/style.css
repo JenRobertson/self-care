@@ -64,7 +64,6 @@ body {
 }
 
 #shadow {
-    opacity: 0;
     transition: left 1s linear, top 1s linear, background 5s linear;
     margin-top: -779px;
     margin-left: -1289px;
